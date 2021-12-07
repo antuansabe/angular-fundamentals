@@ -1,9 +1,32 @@
+<h1> ngIf </h1>
+<input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name"  />
+<p *ngIf="1 == 1" > My contenido</p>
+<hr/>
+<h1> NgModel </h1>
+<p> Nombre {{ person.name }} </p>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name"  />
+<p> Valid: {{nameInput.valid}} </p>
+<p> Age {{ person.age }} </p>
+<hr/>
+<h1>Eventos </h1>
+<button [disabled]="btnDisabled">Enviar </button>
+<button (click)= "toggleButton()"> Toggle Button </button>
+<p> Edad {{ person.age }} </p>
+<button (click)= "increaseAge()"> Age ++ </button>
+<div class="box" (scroll)="onScroll($event)">
+  <p> lorem ipsum smsmsomasomaso </p>
+</div>
+<p> Nombre {{ person.name }} </p>
+<input type="text" [value]="person.name" (keyup)="changeName($event)" />
+
+<hr/>
 <h1>Propiedes Binding </h1>
 <button [disabled]="btnDisabled">Enviar </button>
-<input type="text" [value]="name" />
+<input type="text" [value]="person.name" />
+<progress max="100" [value]="person.age"></progress>
 
 <hr/>
 <h1> Hola Mundo </h1>
 <h2> {{ 'Hola Mundo'.repeat(5)   }}  </h2>
 <p> 3 + 3 =  {{ 3+3 }} </p>
-<h3>   Hola, soy {{ name }} y tengo {{ age }}</h3>
+<h3> Hola, soy {{ name }} y tengo {{ age }}</h3>
