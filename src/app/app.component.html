@@ -1,6 +1,17 @@
+<h1> ngFor </h1>
+<ul>
+    <li *ngFor="let name of names">
+      {{ name }}
+    </li>
+</ul>
+<hr/>
 <h1> ngIf </h1>
-<input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name"  />
-<p *ngIf="1 == 1" > My contenido</p>
+<input type="text" required [(ngModel)]="person.name" />
+<p *ngIf="person.name  == 'antonn' " > Soy antonn</p>
+<p *ngIf="person.name ==  'luis' && person.age === 18; else elseBlock" > Soy luis</p>
+<ng-template #elseBlock>
+    <p>Bloque de else </p>
+</ng-template>
 <hr/>
 <h1> NgModel </h1>
 <p> Nombre {{ person.name }} </p>

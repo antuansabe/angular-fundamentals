@@ -14,6 +14,8 @@ export class AppComponent {
     age: 18,
   }
 
+
+  names: string[ ]= [ 'Lola' , 'Ronnie', 'Filly','Santi', 'Bobi'];
   toggleButton() {
       this.btnDisabled = !this.btnDisabled;
   }
