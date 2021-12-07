@@ -1,4 +1,14 @@
-<h1> *ngFor </h1>
+<h1> ngSwitch </h1>
+<input type="text" required [(ngModel)]="person.name" />
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase=" 'antonn' " > Soy antonn</p>
+  <p *ngSwitchCase=" 'diana' " > Soy diana</p>
+  <p *ngSwitchCase=" 'churry' " > Soy churry</p>
+  <p *ngSwitchDefault> No hace match</p>
+</div>
+
+<hr/>
+<h1> *ngFor Objs </h1>
 <div>
   <div *ngFor= "let product of products">
     <img width="250" [src]="product.image" alt="image">
