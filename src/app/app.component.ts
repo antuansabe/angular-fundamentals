@@ -10,6 +10,11 @@ export class AppComponent {
   name = 'Antonn';
   age = 18;
   btnDisabled = true;
+  register = {
+    name: '',
+    email: '',
+    password: '',
+  }
   person = {
     name: 'Antonn',
     age: 18,
