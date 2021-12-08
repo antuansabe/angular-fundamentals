@@ -19,6 +19,21 @@
     }
   }
 }
+.message-error {
+  background: rgb(193, 7, 7);
+  color: white;
+  opacity: 0;
+  transition: all linear .5s;
+  &.invalid {
+    opacity: 1;
+  }
+}
+
+
+.styles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 //Tablets
 @media screen and (min-width: 40em) {
   .products--grid{
