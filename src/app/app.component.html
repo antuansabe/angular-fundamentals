@@ -1,5 +1,5 @@
 <h1> Formulario </h1>
-<form>
+<form (ngSubmit)="onRegister()" #myForm="ngForm">
   <div class="input-group">
     <label for="name">Nombre </label>
     <input type="text" name="name" required id="name" [(ngModel)]="register.name"  />
@@ -14,10 +14,11 @@
 
   <div class="input-group">
     <label for="password">Password </label>
-    <input type="password" name="password" required id="password" [(ngModel)]="register.password"  />
+    <input type="passwor d" name="password" required id="password" [(ngModel)]="register.password"  />
     <p> Mensajes de error </p>
   </div>
-
+  <button [disabled]="myForm.invalid" type="submit" >Registrar</button>
+  <button type="button" >Accion</button>
 </form>
 
 
