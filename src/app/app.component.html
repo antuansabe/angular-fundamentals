@@ -1,3 +1,9 @@
+<h1>Clss & Style </h1>
+<input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name" />
+<p class="message-error"> El campo es requerido </p>
+
+
+<hr/>
 <h1> ngSwitch </h1>
 <input type="text" required [(ngModel)]="person.name" />
 <div [ngSwitch]="person.name">
@@ -9,9 +15,9 @@
 
 <hr/>
 <h1> *ngFor Objs </h1>
-<div>
+<div class="products--grid">
   <div *ngFor= "let product of products">
-    <img width="250" [src]="product.image" alt="image">
+    <img [src]="product.image" alt="image">
     <h2>{{ product.price }} </h2>
     <p> {{ product.name }}  </p>
   </div>
